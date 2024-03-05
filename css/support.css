@@ -1,0 +1,133 @@
+/* support.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #000000 !important; /* Bright blue for visibility */
+    color: #ffffff;
+}
+
+.navbar a.navbar-brand, .navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #d4d4d4;
+}
+
+
+
+/* Sidebar styling */
+#sidebar-wrapper {
+    min-height: 100vh;
+    background-color: #343a40;
+    color: #fff;
+}
+
+.sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+    background-color: #0069d9;
+    color: #ffffff;
+}
+
+.list-group-item {
+    border: none;
+    padding: 1rem 1.25rem;
+    color: #adb5bd;
+}
+
+.list-group-item:hover, .list-group-item:focus {
+    color: #ffffff;
+    background-color: #007bff;
+    text-decoration: none;
+}
+
+/* Customer Support Section */
+.customer-support-section, .promotions-membership-section, .feedback-reviews-section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    animation: fadeIn 0.5s ease-out;
+}
+
+h2 {
+    color: #343a40;
+}
+
+.support-content, .promotions, .membership-plans, .feedback-form, .user-reviews {
+    margin-bottom: 20px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Feedback Form */
+.feedback-form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+.feedback-form button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.feedback-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Reviews */
+.review {
+    background-color: #f8f9fa;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 4px solid #007bff;
+}
+
+.review .user {
+    font-weight: bold;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .customer-support-section, .promotions-membership-section, .feedback-reviews-section {
+        padding: 15px;
+        margin: 10px;
+    }
+}

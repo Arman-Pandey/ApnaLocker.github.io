@@ -1,0 +1,119 @@
+/* notice.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #000000 !important;
+    color: #ffffff;
+}
+
+.navbar a.navbar-brand, .navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #d4d4d4;
+}
+
+/* Sidebar Styles */
+
+/* Sidebar styling */
+#sidebar-wrapper {
+    min-height: 100vh;
+    background-color: #343a40;
+    color: #fff;
+}
+
+.sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+    background-color: #0069d9;
+    color: #ffffff;
+}
+
+.list-group-item {
+    border: none;
+    padding: 1rem 1.25rem;
+    color: #adb5bd;
+}
+
+.list-group-item:hover, .list-group-item:focus {
+    color: #ffffff;
+    background-color: #007bff;
+    text-decoration: none;
+}
+
+/* Notifications Section */
+.notifications-section {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.notification {
+    background-color: #e9ecef;
+    border-left: 5px solid #007bff;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    position: relative;
+    animation: slideInRight 0.5s ease-out;
+    cursor: pointer;
+}
+
+.notification h3 {
+    margin-top: 0;
+}
+
+.notification p {
+    margin-bottom: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    color: #6c757d;
+}
+
+.close-btn:hover {
+    color: #343a40;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .notifications-section {
+        margin: 10px;
+        padding: 15px;
+    }
+}

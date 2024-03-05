@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Apna Locker</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading">Apna Locker</div>
+            <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Locker Reservations</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Billing</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Support</a>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+            </nav>
+
+            <div class="container-fluid">
+                <h1 class="mt-4">Dashboard</h1>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                            <div class="card-header">Total Lockers</div>
+                            <div class="card-body">
+                                <h5 class="card-title">150</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                            <div class="card-header">Lockers in Use</div>
+                            <div class="card-body">
+                                <h5 class="card-title">45</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+                            <div class="card-header">Available Lockers</div>
+                            <div class="card-body">
+                                <h5 class="card-title">105</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+                            <div class="card-header">New Reservations</div>
+                            <div class="card-body">
+                                <h5 class="card-title">30</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- User Profile Management Section -->
+                
+                 <div class="user-profile-section">
+                    <h2>User Profile Management</h2>
+                    <form id="user-profile-form">
+                      <!-- Personal Information -->
+                      <fieldset>
+                        <legend>Personal Information</legend>
+                        <div class="form-group">
+                          <label for="user-name">Name:</label>
+                          <input type="text" id="user-name" name="name" class="form-control" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                          <label for="user-email">Email:</label>
+                          <input type="email" id="user-email" name="email" class="form-control" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                          <label for="user-phone">Phone Number:</label>
+                          <input type="tel" id="user-phone" name="phone" class="form-control" placeholder="Enter your phone number">
+                        </div>
+                      </fieldset>
+                  
+                      <!-- Security Settings -->
+                      <fieldset>
+                        <legend>Security Settings</legend>
+                        <div class="form-group">
+                          <label for="user-password">New Password:</label>
+                          <input type="password" id="user-password" name="password" class="form-control" placeholder="Enter new password">
+                        </div>
+                        <div class="form-group">
+                          <label for="user-password-confirm">Confirm Password:</label>
+                          <input type="password" id="user-password-confirm" name="password_confirm" class="form-control" placeholder="Confirm new password">
+                        </div>
+                      </fieldset>
+                      
+                      <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </form>
+                  </div>
+                  
+    
+                <!-- Locker Reservation System Section -->
+                <div class="locker-reservation-section">
+                    <h2>Locker Reservation System</h2>
+                    
+                    <!-- Find a Locker -->
+                    <div class="find-locker">
+                      <h3>Find a Locker</h3>
+                      <form id="find-locker-form">
+                        <div class="form-group">
+                          <label for="location">Location:</label>
+                          <select id="location" name="location" class="form-control">
+                            <option value="">Select Location</option>
+                            <!-- Dynamically populate locations -->
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="size">Locker Size:</label>
+                          <select id="size" name="size" class="form-control">
+                            <option value="">Select Size</option>
+                            <!-- Dynamically populate sizes -->
+                          </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Search</button>
+                      </form>
+                    </div>
+                    
+                    <!-- Current Reservations -->
+                    <div class="current-reservations">
+                      <h3>Current Reservations</h3>
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Locker Number</th>
+                            <th>Location</th>
+                            <th>Size</th>
+                            <th>Rental Period</th>
+                            <th>Price</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- Dynamically populate with current reservations -->
+                        </tbody>
+                      </table>
+                    </div>
+                  
+                    <!-- Booking History -->
+                    <div class="booking-history">
+                      <h3>Booking History</h3>
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Locker Number</th>
+                            <th>Location</th>
+                            <th>Size</th>
+                            <th>Rental Period</th>
+                            <th>Price</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- Dynamically populate with booking history -->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  
+    
+                <!-- Payment Information Section -->
+                <div class="payment-information-section">
+                    <h2>Payment Information</h2>
+                    
+                    <!-- Billing Details -->
+                    <div class="billing-details">
+                      <h3>Billing Details</h3>
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Payment Method</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- Dynamically populate with billing details -->
+                        </tbody>
+                      </table>
+                    </div>
+                    
+                    <!-- Payment Methods -->
+                    <div class="payment-methods">
+                      <h3>Payment Methods</h3>
+                      <!-- List of payment methods -->
+                      <div class="payment-methods-list">
+                        <!-- Dynamically populate payment methods -->
+                      </div>
+                      <button class="btn btn-primary" onclick="addPaymentMethod()">Add New Payment Method</button>
+                    </div>
+                    
+                    <!-- Invoices and Receipts -->
+                    <div class="invoices-receipts">
+                      <h3>Invoices and Receipts</h3>
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Invoice Number</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Download</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- Dynamically populate with invoices and receipts -->
+                        </tbody>
+                      </table>
+                    </div>
+                 </div>
+                  
+                  
+    
+                <!-- Notifications and Alerts Section -->
+                <div class="notifications-section">
+                    <h2>Notifications and Alerts</h2>
+                    <div class="notification-list">
+                      <!-- Dynamically populated notifications -->
+                      <div class="notification" onclick="dismissNotification(this)">
+                        <h3>Reservation Reminder</h3>
+                        <p>Your locker reservation starts tomorrow at 10:00 AM.</p>
+                        <span class="close-btn">&times;</span>
+                      </div>
+                      <div class="notification" onclick="dismissNotification(this)">
+                        <h3>Payment Notification</h3>
+                        <p>Your last payment has been processed successfully.</p>
+                        <span class="close-btn">&times;</span>
+                      </div>
+                      <div class="notification" onclick="dismissNotification(this)">
+                        <h3>Security Alert</h3>
+                        <p>Unusual activity detected in your locker. Please check immediately.</p>
+                        <span class="close-btn">&times;</span>
+                      </div>
+                      <!-- Add more notifications here -->
+                    </div>
+                  </div>
+                  <script>
+                    function dismissNotification(notificationElement) {
+      // This function simulates dismissing a notification
+      notificationElement.style.display = 'none';
+    }
+                  </script>
+    
+    
+                <!-- Customer Support Section -->
+                <div class="customer-support-section">
+                    <h2>Customer Support</h2>
+                    <div class="support-content">
+                      <div class="help-center">
+                        <h3>Help Center</h3>
+                        <ul>
+                          <li><a href="#">FAQs</a></li>
+                          <li><a href="#">User Guides</a></li>
+                          <li><a href="#">Locker Usage Tips</a></li>
+                        </ul>
+                      </div>
+                      <div class="support-tickets">
+                        <h3>Support Tickets</h3>
+                        <p>If you're experiencing issues or have questions, <a href="#">submit a support ticket</a>.</p>
+                      </div>
+                      <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <p>Email: support@apnalocker.com</p>
+                        <p>Phone: +1 234 567 890</p>
+                        <p><a href="#">Live Chat</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                <!-- Promotions and Membership Plans Section -->
+                <div class="promotions-membership-section">
+                    <h2>Promotions & Membership Plans</h2>
+                    <div class="promotions">
+                      <h3>Current Promotions</h3>
+                      <p>Don't miss our latest offer - <strong>20% off</strong> on all new locker rentals. Valid until the end of the month.</p>
+                    </div>
+                    <div class="membership-plans">
+                      <h3>Your Membership Details</h3>
+                      <p>Membership Level: <strong>Basic</strong></p>
+                      <p>Upgrade for more benefits such as extended rental periods and priority support. Check out our <a href="#">Premium</a> and <a href="#">Elite</a> plans.</p>
+                    </div>
+                  </div>
+                  
+    
+                
+                    </div>
+                  </div>
+                  
+    
+                
+                      <div class="language-settings">
+                        <h3>Language Settings</h3>
+                        <form id="languageForm">
+                          <select id="languageSelect" class="form-select">
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                            <option value="fr">Français</option>
+                            <option value="de">Deutsch</option>
+                            <!-- Add more languages as needed -->
+                          </select>
+                          <button type="submit">Change Language</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+
+                <!-- Additional content such as tables and forms can be added here -->
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Menu Toggle Script
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+</body>
+</html>

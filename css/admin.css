@@ -1,0 +1,129 @@
+/* admin.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #000000 !important; /* Dark shade for admin distinction */
+    color: #ffffff;
+}
+
+.navbar a.navbar-brand, .navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #d4d4d4;
+}
+
+
+/* Sidebar styling */
+#sidebar-wrapper {
+    min-height: 100vh;
+    background-color: #343a40;
+    color: #fff;
+}
+
+.sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+    background-color: #0069d9;
+    color: #ffffff;
+}
+
+.list-group-item {
+    border: none;
+    padding: 1rem 1.25rem;
+    color: #adb5bd;
+}
+
+.list-group-item:hover, .list-group-item:focus {
+    color: #ffffff;
+    background-color: #007bff;
+    text-decoration: none;
+}
+
+/* Admin Dashboard Content */
+#page-content-wrapper {
+    padding: 20px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+h1, h2 {
+    color: #343a40;
+}
+
+.table {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.table th, .table td {
+    padding: 10px;
+    border-top: none;
+}
+
+/* Form Styles */
+.form-group label {
+    font-weight: bold;
+}
+
+.form-control {
+    margin-bottom: 10px;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 15px;
+    }
+}
+
+/* Enhancements for Delete Locker Form */
+#deleteLockerForm {
+    margin-top: 20px;
+}
+
+/* Custom Styles for Specific Admin Dashboard Elements */
+.admin-section-title {
+    margin-bottom: 15px;
+}
+
+/* Locker Status Highlighting */
+.table-locker-status .completed {
+    color: #28a745;
+}
+
+.table-locker-status .pending {
+    color: #ffc107;
+}
+
+.table-locker-status .overdue {
+    color: #dc3545;
+}

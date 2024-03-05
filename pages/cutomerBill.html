@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Apna Locker</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bill.css">
+</head>
+<body>
+  <header role="banner">
+    <nav class="navbar navbar-expand-md navbar-dark bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">APNA LOCKER</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsExample05">
+                <ul class="navbar-nav mx-auto">
+                    
+                </ul>
+                <ul class="navbar-nav absolute-right">
+                    <li class="nav-item"><a href="../login.html" class="nav-link">Logout</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <!-- <div class="sidebar-heading">Apna Locker</div> -->
+            <div class="list-group list-group-flush">
+              <a href="./welcome.html" class="list-group-item list-group-item-action bg-light">Welcome</a>
+              <a href="./profile.html" class="list-group-item list-group-item-action bg-light">Profile</a>
+              <a href="./customerdashboard.html" class="list-group-item list-group-item-action bg-light" style="color: black; font-weight: bold;">Dashboard</a>
+              <a href="./bookNow.html" class="list-group-item list-group-item-action bg-light">BookNOw</a>
+              <a href="./lockerReservation.html" class="list-group-item list-group-item-action bg-light">Locker Reservations</a>
+              <a href="./cutomerBill.html" class="list-group-item list-group-item-action bg-light">Billing</a>
+             
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <!-- Payment Information Section -->
+                <div class="payment-information-section">
+                    <h2>Payment Information</h2>
+                    
+                    <!-- Billing Details -->
+                    <div class="billing-details">
+                      <h3>Billing Details</h3>
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Payment Method</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- Dynamically populate with billing details -->
+                        </tbody>
+                      </table>
+                    </div>
+                    
+                    <!-- Payment Methods -->
+                    <div class="payment-methods">
+                      <h3>Payment Methods</h3>
+                      <!-- List of payment methods -->
+                      <div class="payment-methods-list">
+                        <!-- Dynamically populate payment methods -->
+                      </div>
+                      <button class="btn btn-primary" onclick="addPaymentMethod()">Add New Payment Method</button>
+                    </div>
+                    
+                    <!-- Invoices and Receipts -->
+                    <div class="invoices-receipts">
+                      <h3>Invoices and Receipts</h3>
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Invoice Number</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Download</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- Dynamically populate with invoices and receipts -->
+                        </tbody>
+                      </table>
+                    </div>
+                 </div>
+                  
+
+
+
+                <!-- Additional content such as tables and forms can be added here -->
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Menu Toggle Script
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+</body>
+</html>

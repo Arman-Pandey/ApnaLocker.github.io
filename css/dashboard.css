@@ -1,0 +1,104 @@
+/* dashboard.css */
+
+/* Reset some Bootstrap styles */
+body, h1, h5, .card-header {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar customization */
+.navbar {
+    background-color: #000000 !important; /* Darker shade for better contrast */
+    color: #ffffff;
+}
+
+.navbar a.navbar-brand {
+    color: #FFF;
+    font-weight: 600;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #d4d4d4;
+}
+
+/* Sidebar styling */
+#sidebar-wrapper {
+    min-height: 100vh;
+    background-color: #343a40;
+    color: #fff;
+}
+
+.sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+    background-color: #0069d9;
+    color: #ffffff;
+}
+
+.list-group-item {
+    border: none;
+    padding: 1rem 1.25rem;
+    color: #adb5bd;
+}
+
+.list-group-item:hover, .list-group-item:focus {
+    color: #ffffff;
+    background-color: #007bff;
+    text-decoration: none;
+}
+
+/* Card customization for dashboard stats */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    font-size: 1.5rem;
+}
+
+.card-body h5 {
+    font-size: 2.5rem;
+}
+
+/* Utility classes */
+.bg-primary, .bg-success, .bg-danger, .bg-warning {
+    transition: background-color 0.3s ease;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 15px;
+    }
+
+    .sidebar-heading, .list-group-item {
+        text-align: center;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Enhancements for better visual feedback */
+.card-header, .card-body {
+    transition: color 0.3s ease;
+}
+
+.card-header:hover {
+    color: #fff;
+}
+
+.card-body:hover {
+    color: #000;
+}

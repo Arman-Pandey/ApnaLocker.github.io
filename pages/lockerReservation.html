@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Apna Locker</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/lockRes.css">
+</head>
+<body>
+    <header role="banner">
+        <nav class="navbar navbar-expand-md navbar-dark bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">APNA LOCKER</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarsExample05">
+                    <ul class="navbar-nav mx-auto">
+                       
+                    </ul>
+                    <ul class="navbar-nav absolute-right">
+                        <li class="nav-item"><a href="../login.html" class="nav-link">Logout</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <!-- <div class="sidebar-heading">Apna Locker</div> -->
+            <div class="list-group list-group-flush">
+              <a href="./welcome.html" class="list-group-item list-group-item-action bg-light">Welcome</a>
+              <a href="./profile.html" class="list-group-item list-group-item-action bg-light">Profile</a>
+              <a href="./customerdashboard.html" class="list-group-item list-group-item-action bg-light" >Dashboard</a>
+               
+                <a href="./bookNow.html" class="list-group-item list-group-item-action bg-light">BookNOw</a>
+                <a href="./lockerReservation.html" class="list-group-item list-group-item-action bg-light" style="color: black; font-weight: bold;">Locker Reservations</a>
+                <a href="./cutomerBill.html" class="list-group-item list-group-item-action bg-light">Billing</a>
+                
+               
+                
+                
+            </div>
+        </div>
+     
+        <div id="page-content-wrapper">
+           
+            <div class="container-fluid">
+                
+                <!-- Locker Reservation System Section -->
+                <div class="locker-reservation-section">
+                    <h2>Locker Reservation System</h2>
+                    
+                    <!-- Find a Locker -->
+                    <div class="find-locker">
+                      <h3>Find a Locker</h3>
+                      <form id="find-locker-form">
+                        <div class="form-group">
+                          <label for="location">Location:</label>
+                          <select id="location" name="location" class="form-control">
+                            <option value="">Select Location</option>
+                            <!-- Dynamically populate locations -->
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="size">Locker Size:</label>
+                          <select id="size" name="size" class="form-control">
+                            <option value="">Select Size</option>
+                            <!-- Dynamically populate sizes -->
+                          </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Search</button>
+                      </form>
+                    </div>
+                    
+                    <!-- Current Reservations -->
+                    <div class="current-reservations">
+                      <h3>Current Reservations</h3>
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Locker Number</th>
+                            <th>Location</th>
+                            <th>Size</th>
+                            <th>Rental Period</th>
+                            <th>Price</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- Dynamically populate with current reservations -->
+                        </tbody>
+                      </table>
+                    </div>
+                  
+                    <!-- Booking History -->
+                    <div class="booking-history">
+                      <h3>Booking History</h3>
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Locker Number</th>
+                            <th>Location</th>
+                            <th>Size</th>
+                            <th>Rental Period</th>
+                            <th>Price</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- Dynamically populate with booking history -->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  
+      
+
+
+
+                <!-- Additional content such as tables and forms can be added here -->
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Menu Toggle Script
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+</body>
+</html>

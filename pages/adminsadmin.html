@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Apna Locker</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    
+  <header role="banner">
+    <nav class="navbar navbar-expand-md navbar-dark bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">APNA LOCKER</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsExample05">
+                <ul class="navbar-nav mx-auto">
+                   
+                </ul>
+                <ul class="navbar-nav absolute-right">
+                    <li class="nav-item"><a href="../login.html" class="nav-link">Logout</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+        <!-- <div class="sidebar-heading">Apna Locker</div> -->
+        <div class="list-group list-group-flush">
+            <a href="./admindashboard.html" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+            
+            
+            <a href="./adminBill.html" class="list-group-item list-group-item-action bg-light">Billing</a>
+            
+            <a href="./adminsadmin.html" class="list-group-item list-group-item-action bg-light" style="color: black; font-weight: bold;">Admin</a>
+           
+        </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+    <div class="container-fluid">
+        <h1 class="mt-5">Admin Dashboard</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Payment Activities</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>User</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>$50</td>
+                            <td>2023-01-15</td>
+                            <td>Completed</td>
+                        </tr>
+                        <tr>
+                            <td>Jane Smith</td>
+                            <td>$75</td>
+                            <td>2023-01-18</td>
+                            <td>Completed</td>
+                        </tr>
+                        <tr>
+                            <td>Mike Brown</td>
+                            <td>$20</td>
+                            <td>2023-01-20</td>
+                            <td>Pending</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-12">
+                <h2>Locker Status</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Locker ID</th>
+                            <th>Location</th>
+                            <th>Status</th>
+                            <th>User</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>$50</td>
+                            <td>2023-01-15</td>
+                            <td>Completed</td>
+                        </tr>
+                        <tr>
+                            <td>Jane Smith</td>
+                            <td>$75</td>
+                            <td>2023-01-18</td>
+                            <td>Completed</td>
+                        </tr>
+                        <tr>
+                            <td>Mike Brown</td>
+                            <td>$20</td>
+                            <td>2023-01-20</td>
+                            <td>Pending</td>
+                        </tr>
+                        
+                        <!-- Locker status records go here -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-12">
+                <h2>User Details</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Current Locker</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- User details records go here -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-12">
+                <h2>Delete Locker</h2>
+                <form id="deleteLockerForm">
+                    <div class="form-group">
+                        <label for="userName">User Name</label>
+                        <input type="text" class="form-control" id="userName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userAddress">User Address</label>
+                        <input type="text" class="form-control" id="userAddress" required>
+                    </div>
+                    <button type="submit" class="btn btn-danger">Delete Locker</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /#page-content-wrapper -->
+</div>
+
+    <!-- Bootstrap and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#deleteLockerForm').on('submit', function(e) {
+                e.preventDefault();
+                // Implement delete logic here
+                var userName = $('#userName').val();
+                var userAddress = $('#userAddress').val();
+                // Call backend API to delete locker
+                console.log('Deleting locker for', userName, 'at', userAddress);
+                // After successful deletion, maybe refresh the page or update the table
+            });
+
+             // Example temporary user details
+        const users = [
+            { name: "Alex Johnson", address: "123 Maple Street", currentLocker: "A101" },
+            { name: "Bethany Cooper", address: "456 Oak Avenue", currentLocker: "B202" },
+            { name: "Charlie Brown", address: "789 Pine Road", currentLocker: "C303" }
+        ];
+
+        // Function to populate the table with user details
+        function populateUserDetails() {
+            const tableBody = document.getElementById('userDetailsTable').getElementsByTagName('tbody')[0];
+            users.forEach(user => {
+                let row = tableBody.insertRow();
+                let cell1 = row.insertCell(0);
+                let cell2 = row.insertCell(1);
+                let cell3 = row.insertCell(2);
+
+                cell1.textContent = user.name;
+                cell2.textContent = user.address;
+                cell3.textContent = user.currentLocker;
+            });
+        }
+
+        // Call the function to populate the table on page load
+        window.onload = populateUserDetails;
+        });
+    </script>
+</body>
+</html>

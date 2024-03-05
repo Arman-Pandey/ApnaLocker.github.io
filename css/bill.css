@@ -1,0 +1,123 @@
+/* bill.css */
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #000000 !important; /* A bright shade of blue */
+    color: #ffffff;
+}
+
+.navbar a.navbar-brand {
+    color: #fff;
+}
+
+/* Sidebar Styles */
+
+/* Sidebar styling */
+#sidebar-wrapper {
+    min-height: 100vh;
+    background-color: #343a40;
+    color: #fff;
+}
+
+.sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+    background-color: #0069d9;
+    color: #ffffff;
+}
+
+.list-group-item {
+    border: none;
+    padding: 1rem 1.25rem;
+    color: #adb5bd;
+}
+
+.list-group-item:hover, .list-group-item:focus {
+    color: #ffffff;
+    background-color: #007bff;
+    text-decoration: none;
+}
+
+/* Payment Information Section */
+.payment-information-section {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+h2, h3 {
+    color: #343a40;
+}
+
+.table {
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translatey(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translatey(0);
+    }
+}
+
+/* Responsive Design Tweaks */
+@media (max-width: 768px) {
+    .payment-information-section {
+        margin: 20px;
+        padding: 10px;
+    }
+}
+
+/* Additional Styles */
+.table th, .table td {
+    padding: 15px;
+    vertical-align: middle;
+}
+
+/* Button Enhancements */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0,123,255,.25);
+}
+
+/* Enhance table readability */
+.table-hover tbody tr:hover {
+    background-color: rgba(0,123,255,.1);
+}
+
+/* Improve visibility for action buttons in tables */
+.table .btn {
+    margin-right: 5px;
+}
+
+/* Adjust navbar toggler visibility */
+.navbar-toggler {
+    border-color: rgba(255,255,255,.1);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
